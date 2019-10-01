@@ -1,0 +1,169 @@
+.admin {
+
+    @media screen and (max-width: 1024px) {
+
+        table,
+        thead,
+        tbody,
+        th,
+        td,
+        tr {
+            display: block;
+        }
+    }
+
+    table {
+        width: 100%;
+        margin-bottom: 30px;
+        border: solid 1px #CECECE;
+
+        @media screen and (max-width: 1024px) {
+            border: none;
+        }
+
+        thead {
+            background: #CECECE;
+
+            tr {
+
+                @media screen and (max-width: 1024px) {
+                    position: absolute;
+                    top: -9999px;
+                    left: -9999px;
+                }
+
+            }
+
+            th {
+                font-weight: 600;
+                font-size: 16px;
+            }
+
+        }
+
+        tr {
+
+            @media screen and (max-width: 1024px) {
+                border: 1px solid #ccc;
+                margin-bottom: 30px;
+            }
+
+            td,
+            th {
+                padding: 10px;
+
+                a {
+                    display: inline-block;
+                    font-weight: 600;
+                    color: #00004D;
+                    position: relative;
+                    padding-left: 0;
+                    padding-right: 20px;
+
+                    &:before{
+                        content: '';
+                        background: #00e7e7;
+                        border: solid 1px darken(#00e7e7, 5%);
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 0;
+                        height: 100%;
+                        z-index: -1;
+                        opacity: 0;
+                        transition: all 0.3s linear;
+                    }
+
+                    &:hover{
+                        padding-left: 10px;
+                        padding-right: 10px;
+
+                        &:before{
+                            width: 100%;
+                            opacity: 1;
+                            border: solid 1px darken(#00e7e7, 5%);
+                            transition: all 0.3s linear;
+                        }
+
+                    }
+                }
+            }
+
+            td {
+                text-align: left;
+                vertical-align: middle;
+                border-bottom: solid 1px #CECECE;
+
+                @media screen and (max-width: 1024px) {
+                    border: none;
+                    border-bottom: 1px solid #eee;
+                    position: relative;
+                    padding-left: 50%;
+                }
+
+                &:before{
+                    @media screen and (max-width: 1024px) {
+                        content: attr(data-label);
+                        position: absolute;
+                        top: 50%;
+                        left: 0;
+                        transform: translateY(-50%);
+                        padding: 10px;
+                        width: 50%;
+                        font-weight: 700;
+                    }
+                }
+
+                p:last-of-type {
+                    margin: 0;
+                }
+
+                &.no-pad {
+                    padding: 10px 10px;
+                }
+
+                label {
+                    display: block;
+                }
+
+                input[type=date] {
+                    box-shadow: none;
+                    border: solid 1px #CECECE;
+                    padding: 5px;
+                }
+
+                &.button-cell{
+                    padding: 10px;
+                    text-align: right;
+                    
+                    @media screen and (max-width: 1024px){
+                        padding-left: 10px;
+                        text-align: center;
+                        border: none;
+
+                        &:before{
+                            display: none;
+                        }
+
+                    }
+
+                    .button,
+                    .button-small{
+
+                        @media screen and (max-width: 1024px){
+                            display: block;
+                            margin: 0 auto;
+                            width: 100%;
+                            max-width: 400px;
+                            padding: 15px 20px;
+                        }
+
+                    }
+
+                }
+            }
+
+        }
+    }
+
+}

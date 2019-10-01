@@ -1,0 +1,51 @@
+.admin.page-container {
+    padding: 30px 0;
+    position: relative;
+
+    h1 {
+        margin-bottom: 40px;
+    }
+
+    .button {
+        display: inline-block;
+        padding: 10px 20px;
+        background: #00e7e7;
+        border: solid 1px darken(#00e7e7, 10%);
+        color: #000;
+        font-weight: 700;
+        font-size: 18px;
+        transition: all 0.3s linear;
+        margin-bottom: 20px;
+
+        &:last-of-type{
+            margin-bottom: 0;
+        }
+
+        &:hover {
+            text-decoration: none;
+            background: darken(#00e7e7, 10%);
+        }
+
+        &.secondary{
+            border: solid 1px darken(#00004d, 10%);
+            background: #00004d;
+            color: #FFF;
+
+            &:hover {
+                background: darken(#00004d, 10%);
+            }
+        }
+    }
+    .button-small{
+        @extend .button;
+        font-size: 15px;
+        padding: 5px 15px;
+    }
+
+    &.container,
+    .container{
+        max-width: 1400px;
+        padding: 0 20px;
+    }
+
+}

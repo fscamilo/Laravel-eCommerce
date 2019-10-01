@@ -1,0 +1,60 @@
+.admin {
+
+    .dashboard {
+
+        @media screen and (max-width: 1024px) {
+            padding: 0;
+        }
+
+        .recent-orders {
+            margin-bottom: 40px;
+        }
+
+        table {
+            border-color: #000;
+
+            .button-small {
+                margin-top: 20px;
+            }
+
+            &.driver-dash{
+
+                tr{
+                    transition: all 0.3s linear;
+
+                    &.pending{
+                        background: rgba(#ffff00, 0.3);
+                    }
+                    &.delivered{
+                        background: rgba(#006600, 0.3);
+                    }
+                    &.rescheduled{
+                        background: rgba(#ffa500, 0.3);
+                    }
+
+                    .button-cell{
+
+                        .button{
+                            background: transparent;
+                            border: none;
+
+                            &:before{
+                                display: none;
+                            }
+                        }
+
+                    }
+
+                }
+
+                tbody tr td{
+                    border-color: #000;
+                }
+
+            }
+
+        }
+
+    }
+
+}

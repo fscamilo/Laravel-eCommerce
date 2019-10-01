@@ -1,0 +1,18 @@
+.navbar{
+    //background: rgba(#000, 0.4) !important;
+
+    .container{
+        max-width: 1400px;
+    }
+    .navbar-brand{
+        width: 40%;
+        float: left;
+        display: block;
+        padding-left: 10px;
+
+        img{
+            display: block;
+            max-width: 200px;
+        }
+    }
+}

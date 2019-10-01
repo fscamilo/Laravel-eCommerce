@@ -1,0 +1,100 @@
+.admin{
+
+    .edit-user{
+        padding-bottom: 60px;
+
+        .button{
+            margin-bottom: 20px !important;
+        }
+
+        .delivery-details{
+            margin-top: 30px;
+            border: solid 1px #CECECE;
+            padding: 30px;
+
+            form{
+
+                .input-field{
+
+                    textarea{
+                        display: inline-block;
+                        height: 120px;
+                        padding: 10px;
+                        max-width: 300px;
+                        overflow: hidden;
+                        margin-right: 20px;
+
+                        @media screen and (max-width: 768px){
+                            width: 100%;
+                            max-width: none;
+                        }
+                    }
+
+                    input[type=checkbox]{
+                        opacity: 0;
+                        pointer-events: none;
+                        position: absolute;
+                        top: -9999px;
+                        left: -9999px;
+                    }
+
+                    .checkbox-wrap{
+                        display: inline-block;
+                        vertical-align: top;
+
+                        .custom-checkbox{
+                            display: inline-block;
+                            content: '';
+                            width: 20px;
+                            height: 20px;
+                            border: solid 1px #CECECE;
+                            border-radius: 4px;
+                            position: relative;
+
+                            &:hover{
+                                cursor: pointer;
+                            }
+                            &:before,&:after{
+                                content: '';
+                                position: absolute;
+                                background: #006600;
+                                z-index: 10;
+                                transition: width 0.1s ease-out;
+                            }
+                            &:before{
+                                width: 0px;
+                                height: 2px;
+                                top: 9px;
+                                left: -3px;
+                                transform: rotate(40deg);
+                            }
+                            &:after{
+                                height: 2px;
+                                width: 0px;
+                                top: 4px;
+                                left: 6px;
+                                transform: rotate(135deg);
+                            }
+
+                            &.checked{
+
+                                &:before{
+                                    width: 15px;
+                                }
+                                &:after{
+                                    width: 25px;
+                                    transition-delay: 0.1s;
+                                }
+
+                            }
+                        }
+                    }
+
+                }
+
+            }
+        }
+
+    }
+
+}
